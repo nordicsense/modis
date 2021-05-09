@@ -4,7 +4,7 @@ import (
 	"math"
 	"testing"
 
-	"github.com/arcticgeo/modis"
+	"github.com/nordicsense/modis"
 )
 
 func TestLatLon_Transform(t *testing.T) {

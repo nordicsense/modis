@@ -5,7 +5,7 @@ import (
 	"math"
 	"time"
 
-	"github.com/arcticgeo/modis"
+	"github.com/nordicsense/modis"
 )
 
 func NewInMemory(p *modis.ImageParams) *inMemory {

@@ -3,7 +3,7 @@ package dataset
 import (
 	"time"
 
-	"github.com/arcticgeo/modis"
+	"github.com/nordicsense/modis"
 )
 
 type Reader interface {

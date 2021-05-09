@@ -5,7 +5,7 @@ import (
 	"math"
 	"time"
 
-	"github.com/arcticgeo/modis"
+	"github.com/nordicsense/modis"
 	"github.com/lukeroth/gdal"
 )
 

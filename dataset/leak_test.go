@@ -4,11 +4,11 @@ import (
 	"path"
 	"testing"
 
-	"github.com/arcticgeo/lib/progress"
-	"github.com/arcticgeo/modis/dataset"
+	"github.com/nordicsense/modis/lib/progress"
+	"github.com/nordicsense/modis/dataset"
 	"github.com/lukeroth/gdal"
 
-	modists "github.com/arcticgeo/modis/ts"
+	modists "github.com/nordicsense/modis/ts"
 )
 
 func testinit(t *testing.T) []modists.LayerPair {

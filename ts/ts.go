@@ -4,8 +4,8 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/arcticgeo/lib/io"
-	"github.com/arcticgeo/lib/progress"
+	"github.com/nordicsense/modis/lib/io"
+	"github.com/nordicsense/modis/lib/progress"
 	"github.com/lukeroth/gdal"
 )
 
