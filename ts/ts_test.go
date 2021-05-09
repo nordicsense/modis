@@ -1,5 +1,7 @@
 package ts_test
 
+// FIXME this test is broken (no longer compiles)
+
 import (
 	"fmt"
 	"os"

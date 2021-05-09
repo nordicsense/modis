@@ -4,7 +4,6 @@ import (
 	"path"
 	"testing"
 
-	"github.com/nordicsense/modis/lib/progress"
 	"github.com/nordicsense/modis/dataset"
 	"github.com/lukeroth/gdal"
 
@@ -26,7 +25,6 @@ func testinit(t *testing.T) []modists.LayerPair {
 
 func TestGDALOpenClose_MemoryLeak(t *testing.T) {
 	pairs := testinit(t)
-	bar := progress.Start("test", len(pairs))
 	for _, pair := range pairs {
 		ds, err := gdal.Open(pair.Value, gdal.ReadOnly)
 		if err != nil {
@@ -40,13 +38,11 @@ func TestGDALOpenClose_MemoryLeak(t *testing.T) {
 			}
 		}
 		ds.Close()
-		bar.Add(1)
 	}
 }
 
 func TestOpenClose_MemoryLeak(t *testing.T) {
 	pairs := testinit(t)
-	bar := progress.Start("test", len(pairs))
 	for _, pair := range pairs {
 		ds, err := dataset.Open(pair.Time)
 		if err != nil {
@@ -58,6 +54,5 @@ func TestOpenClose_MemoryLeak(t *testing.T) {
 			}
 		}
 		ds.Close()
-		bar.Add(1)
 	}
 }

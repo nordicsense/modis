@@ -1,4 +1,4 @@
-package io
+package ts
 
 import (
 	"io/ioutil"

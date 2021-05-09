@@ -4,8 +4,6 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/nordicsense/modis/lib/io"
-	"github.com/nordicsense/modis/lib/progress"
 	"github.com/lukeroth/gdal"
 )
 
@@ -49,17 +47,13 @@ func ListAll(root string, layerPairPatterns ...LayerPair) ([]LayerPair, error) {
 		matchers = append(matchers, patternMatcher{timeMatcher: timeMatcher, valueMatcher: valueMatcher})
 	}
 
-	hdfDSNames, err := io.ScanTree(root, hdfPattern)
+	hdfDSNames, err := ScanTree(root, hdfPattern)
 	if err != nil {
 		return nil, err
 	}
 
-	bar := progress.Start("ListAll", len(hdfDSNames))
-	defer bar.Finish()
-
 	var layerPairs []LayerPair
 	for _, hdfDSName := range hdfDSNames {
-		bar.Add(1)
 		pairs, err := getPairs(hdfDSName, matchers)
 		if err != nil {
 			return layerPairs, err
