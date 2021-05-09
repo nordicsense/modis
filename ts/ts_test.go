@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/nordicsense/modis/gl/ts"
+	"github.com/nordicsense/modis/ts"
 )
 
 func TestListAll(t *testing.T) {
