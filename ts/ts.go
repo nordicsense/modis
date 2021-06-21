@@ -4,7 +4,7 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/lukeroth/gdal"
+	"github.com/nordicsense/gdal"
 )
 
 const (

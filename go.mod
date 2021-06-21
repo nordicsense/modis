@@ -2,8 +2,7 @@ module github.com/nordicsense/modis
 
 go 1.15
 
-replace github.com/lukeroth/gdal => github.com/osklyar/gdal v0.0.0-20210506223057-2fecd07bf2d8
+// Uncomment for GDAL development
+// replace github.com/nordicsense/gdal => ../gdal
 
-require (
-	github.com/lukeroth/gdal v0.0.0-20210429104814-0ed96ec28fb2
-)
+require github.com/nordicsense/gdal v0.0.0-20210621215327-fe21987ff8cc

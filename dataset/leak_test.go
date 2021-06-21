@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/nordicsense/modis/dataset"
-	"github.com/lukeroth/gdal"
+	"github.com/nordicsense/gdal"
 
 	modists "github.com/nordicsense/modis/ts"
 )

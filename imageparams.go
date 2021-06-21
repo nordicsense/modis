@@ -4,7 +4,7 @@ import (
 	"math"
 	"time"
 
-	"github.com/lukeroth/gdal"
+	"github.com/nordicsense/gdal"
 )
 
 type ImageParams struct {

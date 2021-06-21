@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/lukeroth/gdal"
+	"github.com/nordicsense/gdal"
 )
 
 const ModisWKT = `PROJCS["MODIS",
