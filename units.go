@@ -8,6 +8,7 @@ import (
 	"github.com/nordicsense/gdal"
 )
 
+// ModisKWT defines the MODIS projection.
 const ModisWKT = `PROJCS["MODIS",
     GEOGCS["Unknown datum based upon the custom spheroid",
         DATUM["Not specified (based on custom spheroid)",
