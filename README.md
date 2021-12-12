@@ -31,8 +31,11 @@ e.g. `hdf-4.2.15.tar.gz`.
 
     Configure, make and install:
     ```
-    CFLAGS=-Wno-implicit-function-declaration ./configure --prefix=/usr/local --enable-shared=yes
-    make && make install
+    CFLAGS=-Wno-implicit-function-declaration ./configure --prefix=/usr/local \
+        --enable-shared=yes --disable-fortran \
+        --with-jpeg=/opt/homebrew/Cellar/jpeg/9d
+    make
+    sudo make install
     ```
 
 1.  Download and install `gdal`
@@ -41,11 +44,15 @@ e.g. `hdf-4.2.15.tar.gz`.
 
     Configure, make and install:
     ```
-    ./configure --prefix=/usr/local --enable-shared=yes --with-hdf4=yes --disable-fortran --with-jpeg=/opt/homebrew/Cellar/jpeg/9d
-    make && make install
+    ./configure --prefix=/usr/local --enable-shared=yes --with-hdf4=yes \
+        --with-jpeg=/opt/homebrew/Cellar/jpeg/9d \
+        --with-libtiff=/opt/homebrew/Cellar/libtiff/4.3.0 \
+        --with-proj=/opt/homebrew/Cellar/proj/8.2.0
+    make
+    sudo make install
     ```
 
 Now check supported `gdal` formats (`gdal-config --formats`) and build the library `go build .`.
 
 
-Copyright © 2020 Ekaterina Sklyar & Oleg Sklyar. All rights reserved.
+Copyright © 2020 Ekaterina & Oleg Sklyar. All rights reserved.
