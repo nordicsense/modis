@@ -20,6 +20,7 @@ number of dependencies.
     brew install pkg-config
     brew install libtiff
     brew install proj
+    brew install gfortran
     ```
 
 1.  Download and install `hdf4`
@@ -30,7 +31,7 @@ e.g. `hdf-4.2.15.tar.gz`.
 
     Configure, make and install:
     ```
-    CFLAGS=-Wno-implicit-function-declaration ./configure --prefix=/usr/local --enable-shared=yes --disable-fortran
+    CFLAGS=-Wno-implicit-function-declaration ./configure --prefix=/usr/local --enable-shared=yes --disable-static --disable-fortran --with-jpeg=/opt/homebrew/Cellar/jpeg/9e
     make && make install
     ```
 
