@@ -19,6 +19,7 @@ number of dependencies.
     ```
     brew install pkg-config
     brew install libtiff
+    brew install libgeotiff
     brew install proj
     brew install gfortran
     ```
@@ -41,7 +42,7 @@ e.g. `hdf-4.2.15.tar.gz`.
 
     Configure, make and install:
     ```
-    ./configure --prefix=/usr/local --enable-shared=yes --with-hdf4=yes
+    ./configure --prefix=/usr/local --enable-shared=yes --disable-static --with-hdf4=yes --with-proj=/opt/homebrew/Cellar/proj/9.0.0_1 --with-jpeg=/opt/homebrew/Cellar/jpeg/9e --with-libtiff=/opt/homebrew/Cellar/libtiff/4.3.0 --with-geotiff=/opt/homebrew/Cellar/libgeotiff/1.7.1_1
     make && make install
     ```
 
